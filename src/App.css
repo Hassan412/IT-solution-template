@@ -1,0 +1,28 @@
+
+@keyframes float{
+    from {
+        transform: translateY(0px);
+    } to{
+        transform: translateY(20px);
+    }
+}
+.custom-animation{
+    animation: alternate float 4s infinite;
+}
+
+/* .radient-gradient{
+    background: radial-gradient(circle at 50% 100%, rgba(245, 76, 122, 1) 0%, rgba(0, 0, 0, 1) 17%);
+} */
+.radient-gradient::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    background-color: #F54C7A;
+    filter: blur(130px);
+    border-radius: 100%;
+    z-index: 1;
+}
